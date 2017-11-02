@@ -1,8 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import PostsIndex from "../containers/PostsIndex";
 
 export default class App extends React.Component {
   render() {
-    return <div>Hello World</div>;
+    return (
+      <Router>
+        <Route exact path="/" component={PostsIndex} />
+      </Router>
+    );
   }
 }

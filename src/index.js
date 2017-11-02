@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import { render } from "react-dom";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { createStore, applyMiddleware } from "redux";
+import promiseMiddleware from "redux-promise";
 import reducers from "./reducers";
 import App from "./components/App";
 
-const store = createStore(reducers);
+const store = createStore(reducers, applyMiddleware(promiseMiddleware));
 
 render(
   <Provider store={store}>
