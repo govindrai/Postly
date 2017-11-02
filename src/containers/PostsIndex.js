@@ -10,7 +10,20 @@ class PostsIndex extends Component {
   }
 
   render() {
-    return <div>{JSON.stringify(this.props.posts, null, 4)}</div>;
+    return (
+      <div>
+        <h3>Posts</h3>
+        <ul className="list-group">
+          {console.log(this.props.posts)}
+          {console.log(Object.keys(this.props.posts))}
+          {Object.keys(this.props.posts).map(id => {
+            const post = this.props.posts[id];
+            console.log(post);
+            return <li key={id}>{post.title}</li>;
+          })}
+        </ul>
+      </div>
+    );
   }
 }
 
