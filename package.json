@@ -1,10 +1,11 @@
 {
   "name": "postly",
   "version": "1.0.0",
-  "description": "A simple React/Redux/Redux form blogging platform built on Node.js",
+  "description":
+    "A simple React/Redux/Redux form blogging platform built on Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "author": "Govind Rai",
   "license": "ISC",
